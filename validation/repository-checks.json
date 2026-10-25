@@ -1,0 +1,483 @@
+{
+  "date": "2026-10-25",
+  "scope": "Public package portability and artifact checks; no empirical paper replication",
+  "status": "passed",
+  "skill_format_validation": "quick_validate.py passed for the published skill",
+  "markdown_file_links_checked": 77,
+  "broken_file_links": 0,
+  "external_link_targets_listed": 13,
+  "external_http_statuses_checked": false,
+  "arithmetic_checks": 36,
+  "source_pdfs_or_renders_included": false,
+  "local_identifiers_detected": false,
+  "skill_fingerprints_match": true,
+  "problems": [],
+  "links": [
+    {
+      "from": "examples/agricultural-detection.zh-CN.md",
+      "target": "README.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/agricultural-detection.zh-CN.md",
+      "target": "../README.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/agricultural-detection.zh-CN.md",
+      "target": "numeric-checks.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/pcb-defect-detection.zh-CN.md",
+      "target": "README.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/pcb-defect-detection.zh-CN.md",
+      "target": "../README.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/pcb-defect-detection.zh-CN.md",
+      "target": "numeric-checks.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/pcb-defect-detection.zh-CN.md",
+      "target": "reading-process.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/reading-process.zh-CN.md",
+      "target": "README.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/reading-process.zh-CN.md",
+      "target": "../README.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/reading-process.zh-CN.md",
+      "target": "pcb-defect-detection.zh-CN.md#3-第三遍虚拟重实现",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/reading-process.zh-CN.md",
+      "target": "agricultural-detection.zh-CN.md#3-第三遍技术重建与假设审查",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "../README.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "../README.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "reading-process.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "pcb-defect-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "agricultural-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "numeric-checks.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "self-check.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "usage-log.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "source-manifest.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "../validation/original-session-checks.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/README.md",
+      "target": "../validation/SELF-CHECK.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "README.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "../README.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "../validation/SELF-CHECK.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "../skills/three-pass-paper-reading/SKILL.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "../skills/three-pass-paper-reading/references/method-origin.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "pcb-defect-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "agricultural-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "reading-process.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "numeric-checks.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "numeric_checks.py",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "usage-log.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "examples/self-check.zh-CN.md",
+      "target": "source-manifest.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "README.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "skills/three-pass-paper-reading/SKILL.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "examples/README.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "examples/pcb-defect-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "examples/agricultural-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "validation/SELF-CHECK.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "examples/numeric-checks.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "templates/reading-notes.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "templates/reading-notes.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "skills/three-pass-paper-reading/references/method-origin.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "examples/pcb-defect-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "examples/agricultural-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "examples/README.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.md",
+      "target": "LICENSE",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "README.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "skills/three-pass-paper-reading/SKILL.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "examples/pcb-defect-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "examples/agricultural-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "examples/self-check.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "validation/SELF-CHECK.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "templates/reading-notes.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "examples/numeric-checks.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "examples/numeric_checks.py",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "templates/reading-notes.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "skills/three-pass-paper-reading/references/method-origin.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "examples/pcb-defect-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "examples/agricultural-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "examples/README.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "README.zh-CN.md",
+      "target": "LICENSE",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "skills/three-pass-paper-reading/SKILL.md",
+      "target": "references/method-origin.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../README.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../README.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../examples/self-check.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../skills/three-pass-paper-reading/references/method-origin.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../examples/usage-log.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../examples/reading-process.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../examples/usage-log.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../examples/numeric-checks.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "original-session-checks.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../examples/pcb-defect-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../examples/agricultural-detection.zh-CN.md",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "repository-checks.json",
+      "exists": true,
+      "within_repository": true
+    },
+    {
+      "from": "validation/SELF-CHECK.md",
+      "target": "../examples/usage-log.json",
+      "exists": true,
+      "within_repository": true
+    }
+  ],
+  "arithmetic_output_matches_original_values": true,
+  "text_line_endings": "LF enforced by .gitattributes; arithmetic script writes LF",
+  "published_file_count": 20,
+  "json_files_parsed": 5
+}

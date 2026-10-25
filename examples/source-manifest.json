@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "note": "PDF hashes identify the exact locally supplied copies, which can differ from online downloads. Published skill fingerprints are for the portable package.",
+  "files": [
+    {
+      "role": "method",
+      "bytes": 45442,
+      "pages": 2,
+      "sha256": "9699193d100684a0990915c7286f45831d9ef24aabe4aba42527825dcd0a712f",
+      "title": "How to Read a Paper (2007)",
+      "source_url": "https://cs.uwaterloo.ca/~Brecht/courses/856/readings/how-to-read/keshav-paper-reading.pdf",
+      "included_in_repository": false
+    },
+    {
+      "role": "paper_A",
+      "bytes": 5605930,
+      "pages": 18,
+      "sha256": "667479e299682334ab0803166eefd3ed265d4fbbb05c28a1528db35a7dedf15e",
+      "title": "Small PCB Defect Detection Based on Convolutional Block Attention Mechanism and YOLOv8",
+      "source_url": "https://doi.org/10.3390/app16021078",
+      "included_in_repository": false
+    },
+    {
+      "role": "paper_B",
+      "bytes": 9032467,
+      "pages": 11,
+      "sha256": "b67c77fef8960a4bc414bde9c4bf4f02d95c88fbc0a212daa198b158c30cc7fc",
+      "title": "CBAM-STN-TPS-YOLO: Enhancing Agricultural Object Detection through Spatially Adaptive Attention Mechanisms",
+      "source_url": "https://arxiv.org/abs/2506.07357v1",
+      "included_in_repository": false
+    },
+    {
+      "role": "published_skill",
+      "path": "skills/three-pass-paper-reading/SKILL.md",
+      "bytes": 6865,
+      "sha256": "5863791e7252ee1f349f2cb01223379e7b505579527d946de32ee2fd5916b9f2"
+    },
+    {
+      "role": "published_skill",
+      "path": "skills/three-pass-paper-reading/references/method-origin.md",
+      "bytes": 3012,
+      "sha256": "714de7e34667e2ac295577f0542d74a3f1f639f38db4c0396eb891ad12652ba7"
+    }
+  ]
+}

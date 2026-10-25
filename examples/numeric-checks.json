@@ -1,0 +1,329 @@
+{
+  "scope": "Arithmetic only; transcribed values checked against rendered tables",
+  "checks": [
+    {
+      "label": "A Table3 CIoU mAP50",
+      "source": "A p14 Table3",
+      "baseline": 89.3,
+      "proposed": 98.8,
+      "formula": "proposed - baseline",
+      "value": 9.5,
+      "unit": "percentage_points",
+      "relative_change_percent": 10.63829787234043
+    },
+    {
+      "label": "A Table3 CIoU P",
+      "source": "A p14 Table3",
+      "baseline": 90.8,
+      "proposed": 98.2,
+      "formula": "proposed - baseline",
+      "value": 7.400000000000006,
+      "unit": "percentage_points",
+      "relative_change_percent": 8.149779735682827
+    },
+    {
+      "label": "A Table3 CIoU R",
+      "source": "A p14 Table3",
+      "baseline": 85.0,
+      "proposed": 97.3,
+      "formula": "proposed - baseline",
+      "value": 12.299999999999997,
+      "unit": "percentage_points",
+      "relative_change_percent": 14.470588235294123
+    },
+    {
+      "label": "A Table4 YOLOv8 mAP50",
+      "source": "A p14 Table4",
+      "baseline": 95.5,
+      "proposed": 98.8,
+      "formula": "proposed - baseline",
+      "value": 3.299999999999997,
+      "unit": "percentage_points",
+      "relative_change_percent": 3.4554973821989465
+    },
+    {
+      "label": "A Table4 YOLOv8 P",
+      "source": "A p14 Table4",
+      "baseline": 95.3,
+      "proposed": 98.2,
+      "formula": "proposed - baseline",
+      "value": 2.9000000000000057,
+      "unit": "percentage_points",
+      "relative_change_percent": 3.0430220356768123
+    },
+    {
+      "label": "A Table4 YOLOv8 R",
+      "source": "A p14 Table4",
+      "baseline": 93.9,
+      "proposed": 97.3,
+      "formula": "proposed - baseline",
+      "value": 3.3999999999999915,
+      "unit": "percentage_points",
+      "relative_change_percent": 3.620873269435565
+    },
+    {
+      "label": "A EIoU mAP50",
+      "source": "A p14 Table3",
+      "baseline": 90.2,
+      "proposed": 95.8,
+      "formula": "proposed - baseline",
+      "value": 5.599999999999994,
+      "unit": "percentage_points",
+      "relative_change_percent": 6.208425720620836
+    },
+    {
+      "label": "A SIoU mAP50",
+      "source": "A p14 Table3",
+      "baseline": 91.1,
+      "proposed": 98.2,
+      "formula": "proposed - baseline",
+      "value": 7.1000000000000085,
+      "unit": "percentage_points",
+      "relative_change_percent": 7.793633369923181
+    },
+    {
+      "label": "A compute ratio Table3",
+      "source": "A p14 Table3",
+      "formula": "79.4 / 8.2",
+      "value": 9.682926829268295,
+      "unit": "times"
+    },
+    {
+      "label": "A compute ratio Table4",
+      "source": "A p14 Table4",
+      "formula": "79.4 / 8.1",
+      "value": 9.80246913580247,
+      "unit": "times"
+    },
+    {
+      "label": "A throughput Table3",
+      "source": "A p14 Table3; interpreted as FPS from prose",
+      "baseline": 132.46,
+      "proposed": 109.11,
+      "formula": "proposed - baseline",
+      "value": -23.35000000000001,
+      "unit": "FPS",
+      "relative_change_percent": -17.62796315868942
+    },
+    {
+      "label": "A throughput Table4",
+      "source": "A p14 Table4; interpreted as FPS from prose",
+      "baseline": 124,
+      "proposed": 109.11,
+      "formula": "proposed - baseline",
+      "value": -14.89,
+      "unit": "FPS",
+      "relative_change_percent": -12.008064516129036
+    },
+    {
+      "label": "A proposed latency",
+      "source": "A p14 Table4; FPS interpretation",
+      "formula": "1000 / 109.11",
+      "value": 9.165062780680048,
+      "unit": "ms_per_image"
+    },
+    {
+      "label": "A class mean mAP50",
+      "source": "A p12 Table2 rounded class entries",
+      "formula": "mean(class_AP50) * 100",
+      "value": 98.76666666666667,
+      "unit": "percent"
+    },
+    {
+      "label": "A class mean mAP50_95",
+      "source": "A p12 Table2 rounded class entries",
+      "formula": "mean(class_AP50_95) * 100",
+      "value": 61.9,
+      "unit": "percent"
+    },
+    {
+      "label": "A original images in Figure6",
+      "source": "A p15 Figure6",
+      "formula": "116+115+116+116+115+115",
+      "value": 693,
+      "unit": "images"
+    },
+    {
+      "label": "A augmented images in Figure6",
+      "source": "A p15 Figure6",
+      "formula": "696+695+696+746+687+690",
+      "value": 4210,
+      "unit": "images"
+    },
+    {
+      "label": "B PGP full vs YOLO mAP",
+      "source": "B p9 TableV; mAP IoU definition unspecified",
+      "baseline": 71.76,
+      "proposed": 73.71,
+      "formula": "proposed - baseline",
+      "value": 1.9499999999999886,
+      "unit": "percentage_points",
+      "relative_change_percent": 2.717391304347805
+    },
+    {
+      "label": "B PGP full vs STN mAP",
+      "source": "B p9 TableV",
+      "baseline": 72.56,
+      "proposed": 73.71,
+      "formula": "proposed - baseline",
+      "value": 1.1499999999999915,
+      "unit": "percentage_points",
+      "relative_change_percent": 1.5848952590959087
+    },
+    {
+      "label": "B PGP TPS vs STN mAP",
+      "source": "B p9 TableV",
+      "baseline": 72.56,
+      "proposed": 73.01,
+      "formula": "proposed - baseline",
+      "value": 0.45000000000000284,
+      "unit": "percentage_points",
+      "relative_change_percent": 0.6201764057331971
+    },
+    {
+      "label": "B PGP CBAM vs STN mAP",
+      "source": "B p9 TableV",
+      "baseline": 72.56,
+      "proposed": 72.87,
+      "formula": "proposed - baseline",
+      "value": 0.3100000000000023,
+      "unit": "percentage_points",
+      "relative_change_percent": 0.427232635060637
+    },
+    {
+      "label": "B PGP descriptive interaction",
+      "source": "B p9 TableV; not a significance test",
+      "formula": "full - tps - cbam + stn",
+      "value": 0.38999999999998636,
+      "unit": "percentage_points"
+    },
+    {
+      "label": "B MelonFlower full vs YOLO mAP",
+      "source": "B p9 TableV; mAP IoU definition unspecified",
+      "baseline": 44.91,
+      "proposed": 47.24,
+      "formula": "proposed - baseline",
+      "value": 2.3300000000000054,
+      "unit": "percentage_points",
+      "relative_change_percent": 5.188154085949681
+    },
+    {
+      "label": "B MelonFlower full vs STN mAP",
+      "source": "B p9 TableV",
+      "baseline": 45.09,
+      "proposed": 47.24,
+      "formula": "proposed - baseline",
+      "value": 2.1499999999999986,
+      "unit": "percentage_points",
+      "relative_change_percent": 4.768241295187403
+    },
+    {
+      "label": "B MelonFlower TPS vs STN mAP",
+      "source": "B p9 TableV",
+      "baseline": 45.09,
+      "proposed": 46.23,
+      "formula": "proposed - baseline",
+      "value": 1.1399999999999935,
+      "unit": "percentage_points",
+      "relative_change_percent": 2.5282767797737637
+    },
+    {
+      "label": "B MelonFlower CBAM vs STN mAP",
+      "source": "B p9 TableV",
+      "baseline": 45.09,
+      "proposed": 46.77,
+      "formula": "proposed - baseline",
+      "value": 1.6799999999999997,
+      "unit": "percentage_points",
+      "relative_change_percent": 3.725881570192957
+    },
+    {
+      "label": "B MelonFlower descriptive interaction",
+      "source": "B p9 TableV; not a significance test",
+      "formula": "full - tps - cbam + stn",
+      "value": -0.6699999999999946,
+      "unit": "percentage_points"
+    },
+    {
+      "label": "B PGP full vs YOLO accuracy",
+      "source": "B p9 TableV; accuracy definition unspecified",
+      "baseline": 84.86,
+      "proposed": 83.24,
+      "formula": "proposed - baseline",
+      "value": -1.6200000000000045,
+      "unit": "percentage_points",
+      "relative_change_percent": -1.9090266320999305
+    },
+    {
+      "label": "B PGP CBAM vs STN precision",
+      "source": "B p9 TableV",
+      "baseline": 95.34,
+      "proposed": 95.11,
+      "formula": "proposed - baseline",
+      "value": -0.23000000000000398,
+      "unit": "percentage_points",
+      "relative_change_percent": -0.24124187119781704
+    },
+    {
+      "label": "B PGP full vs STN precision",
+      "source": "B p9 TableV",
+      "baseline": 95.34,
+      "proposed": 96.27,
+      "formula": "proposed - baseline",
+      "value": 0.9299999999999926,
+      "unit": "percentage_points",
+      "relative_change_percent": 0.9754562617998674
+    },
+    {
+      "label": "B PGP full vs STN recall",
+      "source": "B p9 TableV",
+      "baseline": 89.52,
+      "proposed": 90.28,
+      "formula": "proposed - baseline",
+      "value": 0.7600000000000051,
+      "unit": "percentage_points",
+      "relative_change_percent": 0.8489722966934732
+    },
+    {
+      "label": "B PGP full vs YOLO latency",
+      "source": "B p9 TableV",
+      "baseline": 16.25,
+      "proposed": 14.22,
+      "formula": "proposed - baseline",
+      "value": -2.0299999999999994,
+      "unit": "ms_per_image",
+      "relative_change_percent": -12.49230769230769
+    },
+    {
+      "label": "B PGP full vs STN latency",
+      "source": "B p9 TableV",
+      "baseline": 16.92,
+      "proposed": 14.22,
+      "formula": "proposed - baseline",
+      "value": -2.700000000000001,
+      "unit": "ms_per_image",
+      "relative_change_percent": -15.957446808510644
+    },
+    {
+      "label": "B Jetson Xavier equivalent FPS",
+      "source": "B p6 III-F; author-reported mean latency",
+      "formula": "1000 / 46",
+      "value": 21.73913043478261,
+      "unit": "FPS"
+    },
+    {
+      "label": "B TableV PGP false discovery rate decrease",
+      "source": "B p9 TableV; FDR is not raw FP count",
+      "formula": "((100-95.34)-(100-96.27))/(100-95.34)*100",
+      "value": 19.957081545064234,
+      "unit": "percent_relative_FDR_reduction"
+    },
+    {
+      "label": "B PGP crop counts",
+      "source": "B p4 III-A1",
+      "formula": "442+246+449",
+      "value": 1137,
+      "unit": "images"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-25",
+  "timezone": "Asia/Shanghai",
+  "skill_name": "three-pass-paper-reading",
+  "skill_path": "skills/three-pass-paper-reading/SKILL.md",
+  "invocation": "Loaded SKILL.md and method-origin.md, then executed both paper workflows; not a standalone executable",
+  "format_validation": {
+    "tool": "skill-creator/scripts/quick_validate.py",
+    "runs": 2,
+    "result": "passed",
+    "scope": "Original local reading session before publication packaging"
+  },
+  "method_source_pages": 2,
+  "application_count": 2,
+  "total_source_pdf_pages": 31,
+  "papers": [
+    {
+      "id": "A",
+      "title": "Small PCB Defect Detection Based on Convolutional Block Attention Mechanism and YOLOv8",
+      "pages": 18,
+      "passes": {
+        "one": "five Cs and continue decision completed",
+        "two": "full text, figures, tables and evidence reviewed",
+        "three": "initial reconstruction, comparison, corrections and critical appraisal completed"
+      },
+      "figures_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "tables_reviewed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "full_page_image_detail_review": [
+        2,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "all_page_contact_review": true,
+      "report": "examples/pcb-defect-detection.zh-CN.md"
+    },
+    {
+      "id": "B",
+      "title": "CBAM-STN-TPS-YOLO: Enhancing Agricultural Object Detection through Spatially Adaptive Attention Mechanisms",
+      "version": "arXiv:2506.07357v1",
+      "pages": 11,
+      "passes": {
+        "one": "five Cs and continue decision completed",
+        "two": "full text, figures, tables and evidence reviewed",
+        "three": "initial reconstruction, comparison, corrections and critical appraisal completed; missing implementation details documented"
+      },
+      "figures_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "tables_reviewed": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V"
+      ],
+      "full_page_image_detail_review": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "all_page_contact_review": true,
+      "report": "examples/agricultural-detection.zh-CN.md"
+    }
+  ],
+  "arithmetic_checks": 36,
+  "external_verification_scope": [
+    "SSGD maintainer README",
+    "PKU original dataset page",
+    "Ultralytics v8.3.0 YOLOv8 YAML",
+    "Ultralytics v8.3.0 BboxLoss/DFLoss code",
+    "arXiv 2506.07357v1 metadata",
+    "selected STN-YOLO method and experiment passages plus repository README",
+    "arXiv metadata for cited references 2401.10379 and 2405.06260"
+  ],
+  "not_performed": [
+    "author model execution",
+    "training or performance replication",
+    "independent inference benchmark",
+    "raw-data leakage test",
+    "new significance test",
+    "exhaustive literature survey",
+    "independent blind skill evaluation"
+  ],
+  "status": "reading and skill creation complete; empirical results not independently verified",
+  "source_evidence": "PDFs, extracted texts and rendered page images were reviewed locally and are not bundled.",
+  "publication_note": "Paths have been replaced with repository-relative paths. See validation/SELF-CHECK.md for packaging checks."
+}
