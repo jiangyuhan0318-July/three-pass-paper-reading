@@ -4,7 +4,7 @@
 
 Date: **2026-10-25** (Asia/Shanghai).
 
-The repository preserves the original paper-reading checks, the initial public-package checks, and the later installation checks.
+The repository preserves two separate checks: the original paper-reading session and the preparation of its public GitHub package.
 
 ## Original reading session
 
@@ -32,12 +32,6 @@ The public package was checked for:
 - Consistency between the published skill files and the fingerprints in the source manifest.
 
 The measured results are in [repository-checks.json](repository-checks.json). External sources are linked directly; repository link checks do not guarantee that an external publisher will remain available. The original PDF fingerprints identify the supplied copies, whose bytes may differ from other downloads.
-
-## Installation checks, 2026-10-26
-
-The public skill directory was downloaded with the Codex installer into a fresh destination. Its two files matched the repository, and the skill-format validator passed. Copies in project-local `.agents/skills` and `.claude/skills` were discovered by Codex CLI 0.147.0 and Claude Code 2.1.260 respectively. Client discovery used metadata interfaces without sending a model task.
-
-No new Python environment or dependencies were installed. Temporary installation copies were removed after the checks. The [installation record](installation-checks.json) records the client versions, tested scope, and cleanup outcome. This checks distribution and discovery; it does not add a new paper-reading quality evaluation or test macOS/Linux execution.
 
 ## What this demonstrates
 

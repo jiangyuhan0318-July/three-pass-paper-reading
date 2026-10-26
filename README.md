@@ -105,8 +105,6 @@ Explain whether I should read further and which background I need.
 
 The skill itself is two text files and installs no Python packages. Downloading requires internet access and installation requires local file access. To read a paper, provide the PDF or its accessible location; the host must supply PDF text extraction and page-image inspection tools. The arithmetic example below uses only the Python standard library.
 
-**Installation verified on Windows:** the public GitHub directory installed into a fresh destination, both Codex CLI 0.147.0 and Claude Code 2.1.260 discovered the project skill, and the downloaded files matched this repository. See [installation checks](validation/installation-checks.json). Client discovery was tested without a model task; autonomous installation dialogue and fresh Claude paper-reading quality were not evaluated. macOS/Linux shell commands follow the documented layout and were not executed on those systems. Temporary test copies were removed after verification.
-
 For human reading, open the [template](templates/reading-notes.md) and work through the same decisions yourself.
 
 ## What this adaptation adds

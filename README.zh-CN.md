@@ -93,8 +93,6 @@ $three-pass-paper-reading 请按三遍法阅读附件论文。
 
 技能本体为两个文本文件，不会安装Python依赖。下载需要联网，安装需要本地文件权限；实际阅读时需提供PDF或可访问地址，由宿主提供PDF文字提取和页面图像查看工具。下方算术示例只使用Python标准库。
 
-**已在Windows完成安装验证：**公开GitHub技能目录能安装到全新位置，Codex CLI 0.147.0和Claude Code 2.1.260均识别了项目技能，下载文件与仓库一致，详见[安装检查](validation/installation-checks.json)。客户端识别测试没有发送模型任务，未评测自主安装对话或新增Claude论文阅读质量。macOS/Linux命令依据官方目录规范编写，未在对应系统实跑。验证后的临时副本已删除。
-
 自己读论文时，可以直接打开[阅读模板](templates/reading-notes.md)，逐项记录判断。
 
 ## 本项目增加了什么
