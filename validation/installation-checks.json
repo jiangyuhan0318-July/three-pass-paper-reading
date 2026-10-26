@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-26",
+  "platform": "Windows",
+  "source_ref": "main",
+  "source_commit": "c2f297532549b5c829aa5185dd41c817bb1a0438",
+  "repo": "https://github.com/jiangyuhan0318-July/three-pass-paper-reading",
+  "official_codex_installer": {
+    "passed": true,
+    "url": "https://github.com/jiangyuhan0318-July/three-pass-paper-reading/tree/main/skills/three-pass-paper-reading",
+    "method": "download",
+    "fresh_destination": true
+  },
+  "skill_files": 2,
+  "files_identical_to_repository": true,
+  "format_validation": "passed",
+  "reference_file_available": true,
+  "powershell_copy_to_both_project_layouts": "passed",
+  "clients": {
+    "codex": {
+      "version": "0.147.0",
+      "discovered": true,
+      "scope": "repo",
+      "method": "skills/list",
+      "model_request_sent": false
+    },
+    "claude": {
+      "version": "2.1.260",
+      "command_registered": "/three-pass-paper-reading",
+      "discovered": true,
+      "method": "initialize supported commands",
+      "model_request_sent": false
+    }
+  },
+  "new_python_environment_created": false,
+  "python_packages_installed": false,
+  "scope": [
+    "Client discovery and file packaging tested; no autonomous model-driven installation conversation evaluated.",
+    "No model task or new paper-reading quality evaluation was run.",
+    "Windows PowerShell tested; macOS/Linux commands follow documented directory layout but were not executed."
+  ],
+  "official_docs": [
+    "https://learn.chatgpt.com/docs/build-skills",
+    "https://code.claude.com/docs/en/skills"
+  ],
+  "temporary_test_copies_removed": true,
+  "readme_manual_powershell_copy": {
+    "passed": true,
+    "clients": [
+      "Codex",
+      "Claude Code"
+    ],
+    "destination": "isolated test home",
+    "files_identical": true
+  },
+  "local_markdown_links_checked": 80,
+  "cleanup_verified": {
+    "paper_installation_workspace_removed": true,
+    "previous_figure_installation_workspace_removed": true,
+    "obsolete_figure_preview_and_pre_rename_archive_removed": true,
+    "formal_repositories_and_installed_skills_preserved": true
+  }
+}

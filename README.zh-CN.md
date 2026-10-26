@@ -26,16 +26,57 @@
 
 原方法强调的是“**最多三遍**”。和研究关系较远的论文可以第一遍后停止；对自己研究重要的论文，再投入更深的阅读。
 
-## 在Codex中使用
+## 在Codex或Claude Code中安装与使用
 
-先让内置技能安装器安装仓库中的技能目录：
+在 **Codex** 中，让内置安装器安装仓库中的技能目录：
 
 ```text
 $skill-installer 安装这个技能：
 https://github.com/jiangyuhan0318-July/three-pass-paper-reading/tree/main/skills/three-pass-paper-reading
 ```
 
-下一轮对话即可这样使用：
+在 **Claude Code** 中发送：
+
+```text
+从 https://github.com/jiangyuhan0318-July/three-pass-paper-reading 安装论文阅读技能。
+将完整的skills/three-pass-paper-reading目录复制到
+~/.claude/skills/three-pass-paper-reading，保留references子目录。
+安装后确认/three-pass-paper-reading可用。
+```
+
+可安装部分是`skills/three-pass-paper-reading`子目录；请完整保留技能及其参考文件。
+
+| 客户端 | 个人安装目录 | 仅当前项目 | 调用方式 |
+|---|---|---|---|
+| Codex | `~/.agents/skills/three-pass-paper-reading/` | `.agents/skills/three-pass-paper-reading/` | `$three-pass-paper-reading` |
+| Claude Code | `~/.claude/skills/three-pass-paper-reading/` | `.claude/skills/three-pass-paper-reading/` | `/three-pass-paper-reading` |
+
+上表依据当前[Codex官方文档](https://learn.chatgpt.com/docs/build-skills)和[Claude Code官方文档](https://code.claude.com/docs/en/skills)。Codex内置安装器使用其配置的技能目录；部分环境使用`~/.codex/skills/`。
+
+首次手动安装，先克隆仓库，再选择客户端目录：
+
+```bash
+git clone https://github.com/jiangyuhan0318-July/three-pass-paper-reading.git
+cd three-pass-paper-reading
+```
+
+**macOS/Linux shell：**
+
+```bash
+skill_root="$HOME/.agents/skills"  # Codex；Claude Code改为"$HOME/.claude/skills"
+mkdir -p "$skill_root"
+cp -R skills/three-pass-paper-reading "$skill_root/"
+```
+
+**Windows PowerShell：**
+
+```powershell
+$skillRoot = Join-Path $HOME '.agents\skills'  # Codex；Claude Code改为'.claude\skills'
+New-Item -ItemType Directory -Force -Path $skillRoot | Out-Null
+Copy-Item -LiteralPath .\skills\three-pass-paper-reading -Destination $skillRoot -Recurse
+```
+
+在目标项目中新开会话。Codex调用示例：
 
 ```text
 $three-pass-paper-reading 请按三遍法阅读附件论文。
@@ -43,18 +84,20 @@ $three-pass-paper-reading 请按三遍法阅读附件论文。
 尚未解决的问题和最终自检，区分作者报告与独立核验。
 ```
 
-只想先判断值不值得读时：
+在Claude Code中先判断值不值得读：
 
 ```text
-$three-pass-paper-reading 对这篇论文做第一遍阅读，
+/three-pass-paper-reading 对这篇论文做第一遍阅读，
 说明是否值得继续，以及我需要补哪些背景知识。
 ```
 
-也可以把 `skills/three-pass-paper-reading/` 整个目录复制到Codex的技能目录：`$CODEX_HOME/skills`，未设置时为 `~/.codex/skills`。保留其中的 `references/` 子目录。其他助手也可读取 `SKILL.md` 执行，具体调用语法取决于应用。
+技能本体为两个文本文件，不会安装Python依赖。下载需要联网，安装需要本地文件权限；实际阅读时需提供PDF或可访问地址，由宿主提供PDF文字提取和页面图像查看工具。下方算术示例只使用Python标准库。
+
+**已在Windows完成安装验证：**公开GitHub技能目录能安装到全新位置，Codex CLI 0.147.0和Claude Code 2.1.260均识别了项目技能，下载文件与仓库一致，详见[安装检查](validation/installation-checks.json)。客户端识别测试没有发送模型任务，未评测自主安装对话或新增Claude论文阅读质量。macOS/Linux命令依据官方目录规范编写，未在对应系统实跑。验证后的临时副本已删除。
 
 自己读论文时，可以直接打开[阅读模板](templates/reading-notes.md)，逐项记录判断。
 
-## 我们增加了什么
+## 本项目增加了什么
 
 三遍阅读、五个C、停止/继续决策、虚拟重实现和综述检索思路来自Keshav原文。本项目增加了便于AI执行与人工检查的做法：
 
@@ -92,8 +135,8 @@ python examples/numeric_checks.py
 - [滑铁卢大学托管的2007年原文](https://cs.uwaterloo.ca/~Brecht/courses/856/readings/how-to-read/keshav-paper-reading.pdf)
 - [作者维护的文章页面：后续版本与多语言翻译](https://svr-sk818-web.cl.cam.ac.uk/keshav/publications/htrap.html)
 
-这是[July](https://github.com/jiangyuhan0318-July)与Codex共同整理的独立实践版本。阅读方法归功于Keshav；本项目贡献是技能化执行、记录和示例。试读报告为AI辅助学习成果，保留页码证据与核验边界。欢迎通过GitHub issue提交附有论文版本和页码/表号的修正。
+本项目是对原方法的独立实践改编。阅读方法归功于Keshav；本项目贡献是技能化执行、记录和示例。试读报告为AI辅助学习成果，保留页码证据与核验边界。欢迎通过GitHub issue提交附有论文版本和页码/表号的修正。
 
 ## 许可
 
-仓库自行撰写的技能指令、模板、脚本和分析文字采用[MIT许可](LICENSE)。参考论文保留各自权利与许可；本仓库提供来源链接和我们的阅读笔记，不附带原始PDF、全文抽取文本或整页截图。
+仓库自行撰写的技能指令、模板、脚本和分析文字采用[MIT许可](LICENSE)。参考论文保留各自权利与许可；本仓库提供来源链接和阅读笔记，不附带原始PDF、全文抽取文本或整页截图。

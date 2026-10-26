@@ -37,16 +37,57 @@ flowchart LR
     E -->|No or background first| D
 ```
 
-## Use with Codex
+## Install and use with Codex or Claude Code
 
-Ask the built-in skill installer to install this directory:
+In **Codex**, ask the built-in installer to install this skill directory:
 
 ```text
 $skill-installer Install the skill at:
 https://github.com/jiangyuhan0318-July/three-pass-paper-reading/tree/main/skills/three-pass-paper-reading
 ```
 
-Then, on your next turn:
+In **Claude Code**, paste:
+
+```text
+Install the skill from https://github.com/jiangyuhan0318-July/three-pass-paper-reading.
+Copy the complete skills/three-pass-paper-reading folder into
+~/.claude/skills/three-pass-paper-reading, including its references subdirectory.
+Confirm that /three-pass-paper-reading is available.
+```
+
+The installable directory is `skills/three-pass-paper-reading`, not the repository root. Keep the entire folder and its supporting reference together.
+
+| Client | Personal installation | Project-only installation | Invocation |
+|---|---|---|---|
+| Codex | `~/.agents/skills/three-pass-paper-reading/` | `.agents/skills/three-pass-paper-reading/` | `$three-pass-paper-reading` |
+| Claude Code | `~/.claude/skills/three-pass-paper-reading/` | `.claude/skills/three-pass-paper-reading/` | `/three-pass-paper-reading` |
+
+These paths follow the current [Codex documentation](https://learn.chatgpt.com/docs/build-skills) and [Claude Code documentation](https://code.claude.com/docs/en/skills). Codex's bundled installer chooses its configured location; some installations use `~/.codex/skills/`.
+
+For a fresh manual installation, clone the repository and choose one client destination:
+
+```bash
+git clone https://github.com/jiangyuhan0318-July/three-pass-paper-reading.git
+cd three-pass-paper-reading
+```
+
+**macOS/Linux shell:**
+
+```bash
+skill_root="$HOME/.agents/skills"  # Codex; use "$HOME/.claude/skills" for Claude Code
+mkdir -p "$skill_root"
+cp -R skills/three-pass-paper-reading "$skill_root/"
+```
+
+**Windows PowerShell:**
+
+```powershell
+$skillRoot = Join-Path $HOME '.agents\skills'  # Codex; use '.claude\skills' for Claude Code
+New-Item -ItemType Directory -Force -Path $skillRoot | Out-Null
+Copy-Item -LiteralPath .\skills\three-pass-paper-reading -Destination $skillRoot -Recurse
+```
+
+Start a new session in the target project. In Codex:
 
 ```text
 $three-pass-paper-reading Read the attached paper in three passes.
@@ -55,14 +96,16 @@ a reconstruction of the method, unresolved questions, and a self-check.
 Write the report in English.
 ```
 
-For a quick screening:
+For a quick screening in Claude Code:
 
 ```text
-$three-pass-paper-reading Do a first pass on this paper.
+/three-pass-paper-reading Do a first pass on this paper.
 Explain whether I should read further and which background I need.
 ```
 
-You can also copy `skills/three-pass-paper-reading/` into your Codex skills directory (`$CODEX_HOME/skills`, or `~/.codex/skills` when unset). Keep the `references/` subdirectory with it. Other assistants can follow the instructions in `SKILL.md`; invocation syntax depends on the host application.
+The skill itself is two text files and installs no Python packages. Downloading requires internet access and installation requires local file access. To read a paper, provide the PDF or its accessible location; the host must supply PDF text extraction and page-image inspection tools. The arithmetic example below uses only the Python standard library.
+
+**Installation verified on Windows:** the public GitHub directory installed into a fresh destination, both Codex CLI 0.147.0 and Claude Code 2.1.260 discovered the project skill, and the downloaded files matched this repository. See [installation checks](validation/installation-checks.json). Client discovery was tested without a model task; autonomous installation dialogue and fresh Claude paper-reading quality were not evaluated. macOS/Linux shell commands follow the documented layout and were not executed on those systems. Temporary test copies were removed after verification.
 
 For human reading, open the [template](templates/reading-notes.md) and work through the same decisions yourself.
 
@@ -104,8 +147,8 @@ The script writes `examples/numeric-checks.json`. Inputs were transcribed from t
 - [2007 paper, hosted by the University of Waterloo](https://cs.uwaterloo.ca/~Brecht/courses/856/readings/how-to-read/keshav-paper-reading.pdf)
 - [Author's page, including later versions and translations](https://svr-sk818-web.cl.cam.ac.uk/keshav/publications/htrap.html)
 
-This is an independently prepared adaptation by [July](https://github.com/jiangyuhan0318-July), developed with Codex. The reading method is credited to Keshav. The worked reports are AI-assisted learning examples with page-level evidence and explicit verification limits. Corrections with a paper version and page/table locator are welcome through GitHub issues.
+This project is an independently prepared adaptation of Keshav's reading method. The worked reports are AI-assisted learning examples with page-level evidence and explicit verification limits. Corrections with a paper version and page/table locator are welcome through GitHub issues.
 
 ## License
 
-[MIT](LICENSE) covers the original skill instructions, templates, scripts, and commentary in this repository. Referenced papers retain their own rights and licenses. The repository links to the papers and publishes our notes; source PDFs, full extracted texts, and page screenshots are not bundled.
+[MIT](LICENSE) covers the original skill instructions, templates, scripts, and commentary in this repository. Referenced papers retain their own rights and licenses. The repository links to the papers and publishes reading notes; source PDFs, full extracted texts, and page screenshots are not bundled.
